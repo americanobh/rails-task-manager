@@ -12,10 +12,6 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
-  def edit
-    @task = Task.new
-  end
-
   def delete
     @task = Task.find(params[:id])
     @task.destroy
@@ -31,11 +27,15 @@ class TasksController < ApplicationController
     redirect_to task_path(@task)
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
   def update
     @task = Task.find(params[:id])
     @task.update(task_params)
 
-    redirect_to restaurant_path(@restaurant)
+    redirect_to task_path(@task)
   end
 
   private

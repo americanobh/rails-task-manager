@@ -2,7 +2,7 @@
 <p><%= @task.details %></p>
 <input type="checkbox" class="form-check-input" id="exampleCheck1" <%= @task.completed ? 'checked' : '' %> >
 <label class="form-check-label" for="exampleCheck1"><%= @task.completed ? 'Task feita' : 'Vai fazer o que precisa ser feito, enrolado' %></label>
-
+<br><br>
 <%= link_to "Delete #{@task.title}",
             task_path(@task),
             method: :delete,
