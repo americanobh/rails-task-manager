@@ -2,13 +2,10 @@
 
 <% @tasks.each do |t|  %>
   <div class="flexbox">
-    <li></li>
-    <input type="checkbox" class="form-check-input" id="exampleCheck1" <%= t.completed ? 'checked' : '' %> >
+    <input type="checkbox" class="" id="exampleCheck1" <%= t.completed ? 'checked' : '' %> >
     <h5><%= link_to t.title, task_path(t) %></h5>
-  </li>
-  </div>
 
-<!-- <h5><%= t.completed%></h5> -->
+  </div>
 <% end %>
 
 <h4><%= link_to "+ Add new task", new_task_path %><h4>
