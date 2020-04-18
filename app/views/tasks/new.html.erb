@@ -1,0 +1,11 @@
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>  <%= f.label :Marque_se_feita %>
+  <%= f.check_box :completed %>
+   <%= f.button 'Edit me' %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Show all tasks", tasks_path %>
