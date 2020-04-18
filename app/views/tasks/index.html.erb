@@ -2,8 +2,10 @@
 
 <% @tasks.each do |t|  %>
   <div class="flexbox">
+    <li></li>
     <input type="checkbox" class="form-check-input" id="exampleCheck1" <%= t.completed ? 'checked' : '' %> >
     <h5><%= link_to t.title, task_path(t) %></h5>
+  </li>
   </div>
 
 <!-- <h5><%= t.completed%></h5> -->
